@@ -1,0 +1,225 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema 
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+	xmlns="http://www.opencaching.com/xmlschemas/ggz/1/0"
+	targetNamespace="http://www.opencaching.com/xmlschemas/ggz/1/0"
+	elementFormDefault="qualified">
+
+	<xsd:annotation>
+		<xsd:documentation>
+			GGZ schema version 1.0
+		</xsd:documentation>	
+	</xsd:annotation>
+	
+	<xsd:element name="ggz">
+		<xsd:annotation>
+			<xsd:documentation>
+				GGZ is the root element in the XML file.
+			</xsd:documentation>
+		</xsd:annotation>
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="time" type="xsd:dateTime">
+                    <xsd:annotation>
+                        <xsd:documentation>
+                            GGZ file creation date and time.
+                        </xsd:documentation>
+                    </xsd:annotation>
+                </xsd:element>
+                <xsd:element name="file" type="fileType" maxOccurs="unbounded">
+                    <xsd:annotation>
+                        <xsd:documentation>
+                            Collection of GPX information to include in the GGZ index.
+                        </xsd:documentation>
+                    </xsd:annotation>
+                </xsd:element>
+            </xsd:sequence>
+        </xsd:complexType>
+	</xsd:element>
+
+    <xsd:complexType name="fileType">
+        <xsd:annotation>
+            <xsd:documentation>
+                Contains Index information for a single GPX file in the GGZ
+            </xsd:documentation>
+        </xsd:annotation>
+        <xsd:sequence>
+            <xsd:element name="name" type="xsd:string">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        Name of the GPX file relative to the /data directory. Subfolders are supported only inside of the data directory
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="crc" type="xsd:hexBinary">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        CRC from the GGZ header to verify that the raw data has not changed.
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="time" type="xsd:dateTime">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        GGZ file creation date and time.
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="gch" type="cacheType" maxOccurs="unbounded">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        Collection of geocache information to include in the GGZ index.
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+        </xsd:sequence>
+    </xsd:complexType>
+
+	<xsd:complexType name="cacheType">
+		<xsd:annotation>
+			<xsd:documentation>
+				Contains the data for a geocache that should be indexed.
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+            <xsd:element name="code" type="xsd:string">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        Unique code that identifies the geocache.
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="name" type="xsd:string" minOccurs="0">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        String that is the name of the geocache.
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="type" type="xsd:string">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        String that defines the type of geocache.
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="lat" type="latitudeType">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        The latitude of the point.  Decimal degrees, WGS84 datum.
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="lon" type="longitudeType">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        The longitude of the point.  Decimal degrees, WGS84 datum.
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="file_pos" type="xsd:integer">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        Byte offset (not UTF8 chars) that marks the start of the WPT tag in the uncompressed GPX file
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="file_len" type="xsd:integer">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        Length of the entire waypoint in bytes (not UTF8 chars). In raw text, non-compressed. Includes the start and ending tags.
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+			<xsd:element name="ratings" type="ratingsType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>
+						Each cache gets rated on its size, ruggedness of terrain, difficulty to find and overall awesomeness.
+					</xsd:documentation>
+				</xsd:annotation>	
+			</xsd:element>
+            <xsd:element name="found" type="xsd:boolean" minOccurs="0">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        Boolean that determines if the geocache has been found.
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+		</xsd:sequence>          
+	</xsd:complexType>
+	
+	<xsd:complexType name="ratingsType">
+		<xsd:annotation>
+			<xsd:documentation>
+				Each cache gets rated on its size, ruggedness of terrain, difficulty to find and overall awesomeness.
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="awesomeness" type="ratingType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>
+						How awesome is the experience of finding the cache.
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="difficulty" type="ratingType" minOccurs="0">	
+				<xsd:annotation>
+					<xsd:documentation>
+						How difficult is is to find the cache once you are at the location.
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="size" type="ratingType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>
+						How big is the cache container.
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="terrain" type="ratingType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>
+						How hard is it to get to the cache location.
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+
+    <xsd:simpleType name="latitudeType">
+        <xsd:annotation>
+            <xsd:documentation>
+                The latitude of the point.  Decimal degrees, WGS84 datum.
+            </xsd:documentation>
+        </xsd:annotation>
+        <xsd:restriction base="xsd:decimal">
+            <xsd:minInclusive value="-90.0"/>
+            <xsd:maxInclusive value="90.0"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+
+    <xsd:simpleType name="longitudeType">
+        <xsd:annotation>
+            <xsd:documentation>
+                The longitude of the point.  Decimal degrees, WGS84 datum.
+            </xsd:documentation>
+        </xsd:annotation>
+        <xsd:restriction base="xsd:decimal">
+            <xsd:minInclusive value="-180.0"/>
+            <xsd:maxExclusive value="180.0"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+
+	<xsd:simpleType name="ratingType">
+		<xsd:annotation>
+			<xsd:documentation>
+				Ratings can be a decimal value from 1.0 to 5.0.
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:decimal">
+			<xsd:minInclusive value="1.0"/>
+			<xsd:maxInclusive value="5.0"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+</xsd:schema>

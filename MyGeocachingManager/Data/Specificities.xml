@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<Specific>
+  <CGeo>
+    <Wpt eng="Final Location" trad="Étape finale;Final;"/>
+    <Wpt eng="Stage of a Multicache" trad="Étape;Station eines Multi-Cache;"/>
+    <Wpt eng="Question to Answer" trad="Énigme;Station mit Frage;"/>
+    <Wpt eng="Parking Area" trad="Parking;Parkplatz;"/>
+    <Wpt eng="Trailhead" trad="Départ du sentier;Ausgangspunkt;"/>
+    <Wpt eng="Reference Point" trad="Point de repère;Referenzpunkt;"/>
+  </CGeo>
+</Specific>

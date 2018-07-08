@@ -328,3 +328,23 @@ ASALocalRun/
 
 # MFractors (Xamarin productivity tool) working folder 
 .mfractor/
+
+# Customs
+InstallationDirCreator/bin/
+InstallationDirCreator/obj/
+MyGeocachingManager/bin/
+MyGeocachingManager/obj/
+tsp/bin/
+tsp/obj/
+Updater/obj/
+Updater/bin/
+*.bak
+Keygen/obj
+Keygen/bin
+*.db
+MyGeocachingManager/Data/CacheCache.db
+*.db
+MyGeocachingManager/Data/GPX/*
+MyGeocachingManager/Data/GPX/PQ/*
+MyGeocachingManager/Data/DB/*
+/MyGeocachingManager/Data/Animation

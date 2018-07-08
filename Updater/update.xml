@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<Installation>
+	<Config>
+		<DirToCopy>
+		</DirToCopy>
+		<FileToCopy>
+		</FileToCopy>
+		<DirToRemove>
+			<Data src="GPX"/>
+			<Data src="Plugins"/>
+		</DirToRemove>
+		<FileToRemove>
+			<Data src="MyGeocachingManager.exe"/>
+		</FileToRemove>
+	</Config>
+</Installation>

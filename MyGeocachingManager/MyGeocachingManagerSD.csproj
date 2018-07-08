@@ -1,0 +1,594 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{86F924DA-6A1A-47A1-8771-5E68956F2D1C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MyGeocachingManager</RootNamespace>
+    <AssemblyName>MyGeocachingManager</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>4096</FileAlignment>
+    <ApplicationIcon>MGM v16.ico</ApplicationIcon>
+    <NoWin32Manifest>False</NoWin32Manifest>
+    <AllowUnsafeBlocks>False</AllowUnsafeBlocks>
+    <NoStdLib>False</NoStdLib>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <IntermediateOutputPath>obj\$(Configuration)\</IntermediateOutputPath>
+    <SignAssembly>False</SignAssembly>
+    <DelaySign>False</DelaySign>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>Full</DebugType>
+    <Optimize>False</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>MyGeocachingManager.xml</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>PdbOnly</DebugType>
+    <Optimize>True</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>MyGeocachingManager.xml</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <CheckForOverflowUnderflow>False</CheckForOverflowUnderflow>
+    <BaseIntermediateOutputPath>obj\</BaseIntermediateOutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Platform)' == 'AnyCPU' ">
+    <BaseAddress>4194304</BaseAddress>
+    <PlatformTarget>x86</PlatformTarget>
+    <RegisterForComInterop>False</RegisterForComInterop>
+    <GenerateSerializationAssemblies>Auto</GenerateSerializationAssemblies>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <CheckForOverflowUnderflow>False</CheckForOverflowUnderflow>
+    <BaseIntermediateOutputPath>obj\</BaseIntermediateOutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="GMap.NET.Core">
+      <HintPath>GMap.NET\GMap.NET.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="GMap.NET.WindowsForms">
+      <HintPath>GMap.NET\GMap.NET.WindowsForms.dll</HintPath>
+    </Reference>
+    <Reference Include="HtmlAgilityPack, Version=1.4.6.0, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>HtmlAgilityPack\HtmlAgilityPack.dll</HintPath>
+    </Reference>
+    <Reference Include="HtmlRenderer">
+      <HintPath>HtmlAgilityPack\HtmlRenderer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.Services.Client">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.SQLite">
+      <HintPath>SQLite\System.Data.SQLite.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.IO.Compression.FileSystem" />
+    <Reference Include="System.Net">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.ServiceModel">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Geocaching\CacheStatus.cs" />
+    <Compile Include="Geocaching\Filters\CustomFilterCode.cs" />
+    <Compile Include="Geocaching\Filters\CustomFilterDateCreation.cs" />
+    <Compile Include="Geocaching\Filters\CustomFilterListOfMissingDT.cs" />
+    <Compile Include="Geocaching\GeocachingConstants.cs" />
+    <Compile Include="Geocaching\MGMDataBase.cs" />
+    <Compile Include="Geocaching\NotificationsManager.cs" />
+    <Compile Include="Geocaching\ProfileMgr.cs" />
+    <Compile Include="GMap.NET\GMapMarkerGCStatsPie.cs" />
+    <Compile Include="GMap.NET\GMapRasterImage.cs" />
+    <Compile Include="GMap.NET\GMapRouteGradient.cs" />
+    <Compile Include="GMap.NET\GMapToolTipPicture.cs" />
+    <Compile Include="GMap.NET\TilePrefetcherEnh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GMap.NET\TilePrefetcherEnh.designer.cs">
+      <DependentUpon>TilePrefetcherEnh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HMI\BrowserWrapper.cs" />
+    <Compile Include="HMI\CacheCache.cs" />
+    <Compile Include="HMI\FieldNotesHMI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HMI\FieldNotesHMI.Designer.cs">
+      <DependentUpon>FieldNotesHMI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HMI\KmlManager.cs" />
+    <Compile Include="HMI\GCLogHMI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HMI\GCLogHMI.Designer.cs">
+      <DependentUpon>GCLogHMI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HMI\IgnoreCacheManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HMI\IgnoreCacheManager.designer.cs">
+      <DependentUpon>IgnoreCacheManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HMI\MatrixDT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HMI\MatrixDT.Designer.cs">
+      <DependentUpon>MatrixDT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HMI\NotificationCreation.cs" />
+    <Compile Include="HMI\NotificationCreation.Designer.cs">
+      <DependentUpon>NotificationCreation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HMI\NotificationGroup.cs" />
+    <Compile Include="HMI\NotificationGroup.Designer.cs">
+      <DependentUpon>NotificationGroup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HMI\PopupNotifier.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="HMI\PopupNotifierForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HMI\PQCheckHMI.cs" />
+    <Compile Include="HMI\PQCheckHMI.Designer.cs">
+      <DependentUpon>PQCheckHMI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HMI\ToolbarConfiguration.cs" />
+    <Compile Include="HMI\ToolbarConfiguration.Designer.cs">
+      <DependentUpon>ToolbarConfiguration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HMI\WaypointsMgr.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HMI\WaypointsMgr.Designer.cs">
+      <DependentUpon>WaypointsMgr.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SpaceEyeTools\ColorRGB.cs" />
+    <Compile Include="SpaceEyeTools\HMI\ConfigEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SpaceEyeTools\HMI\ConfigEditor.Designer.cs">
+      <DependentUpon>ConfigEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SpaceEyeTools\HMI\ExtendedControl.cs" />
+    <Compile Include="SpaceEyeTools\HMI\NotificationManager.cs" />
+    <Compile Include="SpaceEyeTools\Markdown\Escapes.cs" />
+    <Compile Include="SpaceEyeTools\Markdown\Markdown.cs" />
+    <Compile Include="SpaceEyeTools\SimpleCluster.cs" />
+    <Compile Include="HMI\Diagnostics.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HMI\Diagnostics.Designer.cs">
+      <DependentUpon>Diagnostics.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HMI\MyPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SpaceEyeTools\BingTranslator.cs" />
+    <Compile Include="Geocaching\DatabaseOfFiles.cs" />
+    <Compile Include="Geocaching\Filters\CustomFilterAltitude.cs" />
+    <Compile Include="Geocaching\Filters\CustomFilterExcludeMissingCaches.cs" />
+    <Compile Include="Geocaching\Filters\CustomFilterExcludeSelection.cs" />
+    <Compile Include="Geocaching\Filters\CustomFilterNoStats.cs" />
+    <Compile Include="Geocaching\Filters\CustomFilterWithSpoiler.cs" />
+    <Compile Include="Geocaching\Filters\CustomFilterNonTranslated.cs" />
+    <Compile Include="Geocaching\OV2Reader.cs" />
+    <Compile Include="GMap.NET\GMapControlCustom.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GMap.NET\GMapMarkerGCStats.cs" />
+    <Compile Include="GMap.NET\GMapMarkerImage.cs" />
+    <Compile Include="GMap.NET\GMapMarkerCircle.cs" />
+    <Compile Include="GMap.NET\GMapMarkerText.cs" />
+    <Compile Include="GMap.NET\GMapOverlayCustom.cs" />
+    <Compile Include="GMap.NET\GMapWrapper.cs" />
+    <Compile Include="GMap.NET\GMapToolTipCustom.cs" />
+    <Compile Include="HMI\BetaDownload.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HMI\BetaDownload.Designer.cs">
+      <DependentUpon>BetaDownload.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SpaceEyeTools\Coordinate.cs" />
+    <Compile Include="SpaceEyeTools\DocumentationReader.cs" />
+    <Compile Include="SpaceEyeTools\HMI\CoordConvHMI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SpaceEyeTools\HMI\CoordConvHMI.Designer.cs">
+      <DependentUpon>CoordConvHMI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SpaceEyeTools\HMI\NamespaceReflector.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SpaceEyeTools\HMI\NamespaceReflector.Designer.cs">
+      <DependentUpon>NamespaceReflector.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HMI\PluginsDownload.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HMI\PluginsDownload.Designer.cs">
+      <DependentUpon>PluginsDownload.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HMI\TrackSelector.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HMI\TrackSelector.Designer.cs">
+      <DependentUpon>TrackSelector.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IScriptV2.cs" />
+    <Compile Include="SpaceEyeTools\KonamiSequence.cs" />
+    <Compile Include="Geocaching\Filters\CustomFilterModified.cs" />
+    <Compile Include="Geocaching\Filters\CustomFilterNoDescription.cs" />
+    <Compile Include="HMI\PQDownloadHMI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HMI\PQDownloadHMI.Designer.cs">
+      <DependentUpon>PQDownloadHMI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SpaceEyeTools\HMI\ColorChooser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SpaceEyeTools\HMI\ColorChooser.Designer.cs">
+      <DependentUpon>ColorChooser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SpaceEyeTools\CRC32.cs" />
+    <Compile Include="Geocaching\Filters\ChainedFiltersAND.cs" />
+    <Compile Include="Geocaching\Filters\CustomFilterArea.cs" />
+    <Compile Include="Geocaching\Filters\CustomFilterBookmarked.cs" />
+    <Compile Include="SpaceEyeTools\HMI\ComboItem.cs" />
+    <Compile Include="HMI\FavManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HMI\FavManager.Designer.cs">
+      <DependentUpon>FavManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Geocaching\Filters\CustomFilterNoOfflineData.cs" />
+    <Compile Include="Geocaching\ListTextCoord.cs" />
+    <Compile Include="Geocaching\TextCoord.cs" />
+    <Compile Include="HMI\AboutBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HMI\AboutBox.Designer.cs">
+      <DependentUpon>AboutBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HMI\AttributeImage.cs" />
+    <Compile Include="HMI\CacheDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HMI\CacheDetail.Designer.cs">
+      <DependentUpon>CacheDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Geocaching\Filters\CacheFilter.cs" />
+    <Compile Include="Geocaching\CacheLog.cs" />
+    <Compile Include="Geocaching\Filters\ChainedFiltersOR.cs" />
+    <Compile Include="HMI\LanguageItem.cs" />
+    <Compile Include="HMI\ImageExportDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HMI\ImageExportDialog.Designer.cs">
+      <DependentUpon>ImageExportDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SpaceEyeTools\MyTools.cs" />
+    <Compile Include="SpaceEyeTools\HMI\ParametersChanger.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SpaceEyeTools\HMI\ParametersChanger.Designer.cs">
+      <DependentUpon>ParametersChanger.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SpaceEyeTools\SimpleMarkdown.cs" />
+    <Compile Include="SpaceEyeTools\TranslationManager.cs" />
+    <Compile Include="HMI\HtmlExportDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HMI\HtmlExportDialog.Designer.cs">
+      <DependentUpon>HtmlExportDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IScript.cs" />
+    <Compile Include="HMI\SpoilerKeywords.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HMI\SpoilerKeywords.Designer.cs">
+      <DependentUpon>SpoilerKeywords.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SpaceEyeTools\HMI\MyMessageBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SpaceEyeTools\HMI\MyMessageBox.Designer.cs">
+      <DependentUpon>MyMessageBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SpaceEyeTools\PointDouble.cs" />
+    <Compile Include="HMI\StartupFilesConfig.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HMI\StartupFilesConfig.Designer.cs">
+      <DependentUpon>StartupFilesConfig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HMI\TagManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HMI\TagManager.Designer.cs">
+      <DependentUpon>TagManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SpaceEyeTools\StringCypher.cs" />
+    <Compile Include="SpecialFeatures\SpecialFeaturesMgt.cs" />
+    <Compile Include="TSP\Cities.cs" />
+    <Compile Include="TSP\City.cs" />
+    <Compile Include="SpaceEyeTools\HMI\ComboBoxItem.cs" />
+    <Compile Include="SpaceEyeTools\HMI\ComboCollection.cs" />
+    <Compile Include="SpaceEyeTools\HMI\Splashscreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SpaceEyeTools\HMI\Splashscreen.Designer.cs">
+      <DependentUpon>Splashscreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SpaceEyeTools\HMI\ThreadProgress.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SpaceEyeTools\HMI\ThreadProgress.Designer.cs">
+      <DependentUpon>ThreadProgress.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HMI\DownloadWorker.cs" />
+    <Compile Include="SpaceEyeTools\EXControls\EXComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SpaceEyeTools\EXControls\EXListView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MainWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainWindow.Designer.cs">
+      <DependentUpon>MainWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Geocaching\Geocache.cs" />
+    <Compile Include="SpaceEyeTools\HMI\ImagedComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="TSP\Link.cs" />
+    <Compile Include="HMI\NoteForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HMI\NoteForm.Designer.cs">
+      <DependentUpon>NoteForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Geocaching\OfflineCacheData.cs" />
+    <Compile Include="Geocaching\OfflineData.cs" />
+    <Compile Include="Geocaching\OfflineImageWeb.cs" />
+    <Compile Include="TSP\Population.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="GMap.NET\TilePrefetcherEnh.resx">
+      <DependentUpon>TilePrefetcherEnh.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HMI\BetaDownload.resx">
+      <DependentUpon>BetaDownload.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HMI\Diagnostics.resx">
+      <DependentUpon>Diagnostics.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HMI\FieldNotesHMI.resx">
+      <DependentUpon>FieldNotesHMI.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HMI\GCLogHMI.resx">
+      <DependentUpon>GCLogHMI.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HMI\IgnoreCacheManager.resx">
+      <DependentUpon>IgnoreCacheManager.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HMI\MatrixDT.resx">
+      <DependentUpon>MatrixDT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HMI\NotificationCreation.resx">
+      <DependentUpon>NotificationCreation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HMI\NotificationGroup.resx">
+      <DependentUpon>NotificationGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HMI\PQCheckHMI.resx">
+      <DependentUpon>PQCheckHMI.Designer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HMI\ToolbarConfiguration.resx">
+      <DependentUpon>ToolbarConfiguration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HMI\WaypointsMgr.resx">
+      <DependentUpon>WaypointsMgr.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SpaceEyeTools\HMI\ConfigEditor.resx">
+      <DependentUpon>ConfigEditor.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SpaceEyeTools\HMI\CoordConvHMI.resx">
+      <DependentUpon>CoordConvHMI.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SpaceEyeTools\HMI\NamespaceReflector.resx">
+      <DependentUpon>NamespaceReflector.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HMI\PluginsDownload.resx">
+      <DependentUpon>PluginsDownload.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HMI\PQDownloadHMI.resx">
+      <DependentUpon>PQDownloadHMI.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HMI\TrackSelector.resx">
+      <DependentUpon>TrackSelector.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HMI\UserInfo.resx">
+      <DependentUpon>UserInfo.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SpaceEyeTools\HMI\ColorChooser.resx">
+      <DependentUpon>ColorChooser.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HMI\AboutBox.resx">
+      <DependentUpon>AboutBox.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HMI\CacheDetail.resx">
+      <DependentUpon>CacheDetail.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HMI\FavManager.resx">
+      <DependentUpon>FavManager.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HMI\HtmlExportDialog.resx">
+      <DependentUpon>HtmlExportDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HMI\ImageExportDialog.resx">
+      <DependentUpon>ImageExportDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SpaceEyeTools\HMI\ParametersChanger.resx">
+      <DependentUpon>ParametersChanger.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SpaceEyeTools\HMI\Splashscreen.resx">
+      <DependentUpon>Splashscreen.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HMI\StartupFilesConfig.resx">
+      <DependentUpon>StartupFilesConfig.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HMI\TagManager.resx">
+      <DependentUpon>TagManager.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SpaceEyeTools\HMI\ThreadProgress.resx">
+      <DependentUpon>ThreadProgress.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainWindow.resx">
+      <DependentUpon>MainWindow.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HMI\NoteForm.resx">
+      <DependentUpon>NoteForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SpaceEyeTools\HMI\MyMessageBox.resx">
+      <DependentUpon>MyMessageBox.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HMI\SpoilerKeywords.resx">
+      <DependentUpon>SpoilerKeywords.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="App.config" />
+    <None Include="MyGeocachingManager.exe.config.publish" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Geocaching\ROT13.cs" />
+    <Compile Include="HMI\TabControlEx.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="TSP\Tour.cs" />
+    <Compile Include="TSP\Tsp.cs" />
+    <Compile Include="TSP\TspEventArgs.cs" />
+    <Compile Include="Geocaching\Waypoint.cs" />
+    <Compile Include="HMI\UserInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HMI\UserInfo.Designer.cs">
+      <DependentUpon>UserInfo.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="favicon.ico" />
+    <Content Include="MGM v16.ico" />
+    <Content Include="MGM v5.ico" />
+    <Content Include="ProfilingSessions\Session20160706_103047.sdps" />
+    <Content Include="ProfilingSessions\Session20160706_103424.sdps" />
+    <Content Include="ProfilingSessions\Session20160708_171922.sdps" />
+    <Content Include="TODO.txt" />
+    <None Include="MANDATORY_CONFIG.dat" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="SpecialFeatures" />
+    <Folder Include="SpaceEyeTools\Markdown" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

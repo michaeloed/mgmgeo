@@ -1,0 +1,144 @@
+<html><style>
+td, th {border: 1px solid black;} 
+td {border: thin dotted #008000;} 
+table {border-collapse: collapse;}
+</style><script type="text/javascript">
+function getParam ( sname )
+{
+  var params = location.search.substr(location.search.indexOf("?")+1);
+  var sval = "";
+  params = params.split("&");
+    // split param and value into individual pieces
+    for (var i=0; i<params.length; i++)
+       {
+         temp = params[i].split("=");
+         if ( [temp[0]] == sname ) { sval = temp[1]; }
+       }
+  return sval;
+}
+
+function shownoticeandcolumn(showonlynotice, column, showcolumn){
+    dpshow = "table-cell";
+    dphide = "none";
+	if (showcolumn)
+        dp = dpshow;
+    else
+        dp = dphide;
+		
+	//alert(showonlynotice + " " + column + " " + showcolumn);
+    tds = document.getElementsByTagName('tr');
+    for (i=0; i<tds.length; i++)
+	{
+		isnotice = false;
+		isnotice = isnotice || (tds[i].childNodes[1].innerHTML.indexOf("notice.png") !== -1);
+		isnotice = isnotice || (tds[i].childNodes[1].innerHTML.indexOf("English") == 0);
+		isnotice = isnotice || (tds[i].childNodes[1].innerHTML.indexOf("<h2><font color=\"blue\">") == 0);
+		
+		if (isnotice)
+		{
+			// on a une notice
+			// On affiche tout le temps de toute faÃ§on mais on regarde quand mÃªme les histoires de colonne
+			tds[i].childNodes[0].style.display = dpshow;
+			tds[i].childNodes[1].style.display = dpshow;
+			tds[i].childNodes[2].style.display = dpshow;
+			
+			// La bonne gestion de la colonne
+			tds[i].childNodes[column].style.display = dp;
+		}
+		else
+		{
+			// Ce n'est pas une notice
+			if (showonlynotice)
+			{
+				// On masque donc on se fout des histoires de colonne
+				tds[i].childNodes[0].style.display = dphide;
+				tds[i].childNodes[1].style.display = dphide;
+				tds[i].childNodes[2].style.display = dphide;
+			}
+			else
+			{
+				// on montre mais on regarde quand mÃªme les histoires de colonne
+				tds[i].childNodes[0].style.display = dpshow;
+				tds[i].childNodes[1].style.display = dpshow;
+				tds[i].childNodes[2].style.display = dpshow;
+				
+				// La bonne gestion de la colonne
+				tds[i].childNodes[column].style.display = dp;
+			}
+
+		}
+	}
+}
+
+function showhidenoticeandcolumnfromradio(){
+
+  var ele1 = document.getElementsByName('groupNotice');
+  var ele2 = document.getElementsByName('groupLangue');
+  showonlynotice = true;
+  if (ele1[0].checked)
+  {
+	showonlynotice = false;
+  }
+  
+  if (ele2[0].checked)
+  {
+     shownoticeandcolumn(showonlynotice, 1, true);
+     shownoticeandcolumn(showonlynotice, 2, true);
+  }
+  else if (ele2[1].checked) // English
+	{
+		shownoticeandcolumn(showonlynotice, 1, true);
+		shownoticeandcolumn(showonlynotice, 2, false);
+	}
+  else if (ele2[2].checked) // FranÃ§ais
+	{
+		shownoticeandcolumn(showonlynotice, 2, true);
+		shownoticeandcolumn(showonlynotice, 1, false);
+	}
+}
+
+var param = getParam("lng");
+var param2 = getParam("notice");
+window.onload = initialize
+function initialize() {
+  var ele = document.getElementsByName('groupLangue');
+  if (param == "fr")
+  {
+     ele[2].checked = true;
+  }
+ else if (param == "en")
+ {
+    ele[1].checked = true;
+  }
+  else
+ {
+    ele[0].checked = true;
+  }
+  
+  var ele2 = document.getElementsByName('groupNotice');
+  if (param2 == "true")
+  {
+     ele2[1].checked = true;
+  }
+ else
+ {
+    ele2[0].checked = true;
+  }
+  
+  showhidenoticeandcolumnfromradio();
+}
+</script>
+<title>MGM - version changelog</title><body>
+<a href='License/MyGeocachingManager.License.txt'>Conditions de licence d'utilisation du logiciel MyGeocachingManager</a><br><br>
+<form name='myForm'><b>
+<input type='radio' name='groupLangue' onclick='showhidenoticeandcolumnfromradio();' checked='Checked'/>English + Français</input>
+<input type='radio' name='groupLangue' onclick='showhidenoticeandcolumnfromradio();' />English</input>
+<input type='radio' name='groupLangue' onclick='showhidenoticeandcolumnfromradio();' />Français</input><br>
+</b></form>
+<form name='myForm2'><b>
+<input type='radio' name='groupNotice' onclick='showhidenoticeandcolumnfromradio();' checked='Checked'/>All / Tout</input>
+<input type='radio' name='groupNotice' onclick='showhidenoticeandcolumnfromradio();' />Important only / Important seulement</input>
+</b></form>
+<table id='mytable' border = '1' width = '100%'><tr bgcolor='#99FF99'><th width='10%'>Type</th><th width='45%'>English</th><th width='45%'>Français</th></tr><tr><td width='10%'><h2><font color=blue>08/07/2018</font></h2></td><td width='45%'><h2><font color=blue>Version 4.0.6.0</font></h2></td><td width='45%'><h2><font color=blue>Version 4.0.6.0</font></h2></td></tr><tr><td width='10%' bgcolor='#CC0000' style='color: #FFFFFF;'><i>Fixed</i></td><td width='45%' ><b>GC.com</b>:<br>Fixed login mechanism on GC.com</td><td width='45%' ><b>GC.com</b>:<br>Correction du mécanisme d'authentification sur GC.com</td></tr></table>
+</body>
+</html>

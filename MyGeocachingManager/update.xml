@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<Installation>
+	<Config>
+		<DirToCopy>
+		</DirToCopy>
+		<FileToCopy>
+		</FileToCopy>
+		<DirToRemove>
+			<Data src="fr-FR"/>
+			<Data src="Resources\Img\Star2"/>
+			<Data src="Resources\Img\AttributeOx"/>
+			<Data src="Resources\Img\AttributeOxGreyed"/>
+			<Data src="Img"/>
+			<Data src="Lang"/>
+			<Data src="Tips"/>
+		</DirToRemove>
+		<FileToRemove>
+			<Data src="MGM_Lng_Generator.xls"/>
+			<Data src="MGM_Tip_Generator.xls"/>
+			<Data src="License\DotNetZip.License.txt"/>
+			<Data src="License\ZLib.License.txt"/>
+			<Data src="Ionic.Zip.dll"/>
+			<Data src="System.Data.SQLite.xml"/>
+			<Data src="System.Data.SQLite.dll"/>
+			<Data src="System.Data.SQLite.dll.32"/>
+			<Data src="System.Data.SQLite.dll.64"/>
+			<Data src="patch_SQL_32.bat"/>
+			<Data src="patch_SQL_64.bat"/>
+		</FileToRemove>
+		<FileToCopy32>
+		</FileToCopy32>
+		<FileToCopy64>
+		</FileToCopy64>
+		<FileToMove>
+			<Data src="template_logheader.txt" dst="Data\template_logheader.txt"/>
+			<Data src="Bookmarks.dat" dst="Data\Bookmarks.dat"/>
+			<Data src="CacheCache.db" dst="Data\CacheCache.db"/>
+			<Data src="CacheCache.id" dst="Data\CacheCache.id"/>
+			<Data src="CacheStatus.dat" dst="Data\CacheStatus.dat"/>
+			<Data src="Catastrophe.cs" dst="Data\Catastrophe.cs"/>
+			<Data src="IgnoreList.dat" dst="Data\IgnoreList.dat"/>
+			<Data src="OfflineData.dat" dst="Data\OfflineData.dat"/>
+			<Data src="Profiles.dat" dst="Data\Profiles.dat"/>
+			<Data src="Specificities.xml" dst="Data\Specificities.xml"/>
+			<Data src="template_gc.dat" dst="Data\template_gc.dat"/>
+			<Data src="WaypointsMGM.dat" dst="Data\WaypointsMGM.dat"/>
+		</FileToMove>
+		<DirToMove>
+			<Data src="GPX" dst="Data\GPX"/>
+			<Data src="MapCache" dst="Data\MapCache"/>
+			<Data src="Plugins" dst="Data\Plugins"/>
+			<Data src="Filters" dst="Data\Filters"/>
+			<Data src="Offline" dst="Data\Offline"/>
+		</DirToMove>
+	</Config>
+</Installation>

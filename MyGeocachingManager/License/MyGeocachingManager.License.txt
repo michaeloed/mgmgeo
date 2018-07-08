@@ -1,0 +1,42 @@
+CONDITIONS DE LICENCE D'UTILISATION DU LOGICIEL GRATUIT MYGEOCACHINGMANAGER
+---------------------------------------------------------------------------
+
+MyGeocachingManager est un logiciel téléchargeable qui ne nécessite pas le paiement de frais de licence. Le
+propriétaire du droit d’auteur ainsi que la personne accordant la licence du logiciel que vous téléchargez ou avez téléchargé est :
+La personne physique propriétaire du site http://mgmgeo.free.fr et développeur du logiciel MyGeocachingManager sous le pseudonyme SpaceEye ou Mgmgeo (email : mgmgeo@free.fr).
+
+La présente licence de logiciel livre un contrat légal d’obligation entre celui qui
+télécharge le logiciel (“Vous“) et celui qui accorde la licence.
+
+CE LOGICIEL EST PROTEGE PAR LE DROIT D'AUTEUR. LE PROPRIETAIRE DU DROIT D'AUTEUR SE RESERVE TOUS LES DROITS EXCLUSIFS SUR LE LOGICIEL, SAUF CEUX ACCORDES PAR LA LICENCE AUX UTILISATEURS PAR LE PRESENT CONTRAT ET SUJETS AU RESPECT STRICT DES DISPOSITIONS DE LA PRESENTE LICENCE DE LOGICIEL GRATUIT.
+
+Bien que des frais de licence n'aient pas à être payés pour l'utilisation du logiciel, cela ne signifie pas qu'il n'y ait pas des conditions à son utilisation. Pour que le propriétaire du droit d’auteur puisse continuer à vous offrir MyGeocachingManager gratuitement, vous devez vous engager à respecter les conditions suivantes. Vous êtes censés les avoir lues, comprises et avoir acceptées avant toute utilisation de MyGeocachingManager.
+
+Si vous ne respectez pas les conditions prévues par la présente licence, votre licence d'utilisation du logiciel sera immédiatement et automatiquement révoquée sans préavis ou autre action par le propriétaire du droit d'auteur.
+
+CONDITIONS D'UTILISATION DU LOGICIEL
+------------------------------------
+
+1. Il vous est accordé une licence non exclusive pour utiliser le logiciel sujet à votre respect des conditions de la présente licence de logiciel gratuit.
+
+2. Vous pouvez utiliser le logiciel sur l'ensemble de vos ordinateurs personnels ou loués sous votre contôle. Vous pouvez avoir une copier de sauvegarde du logiciel pour votre usage personnel afin de remplacer la copie originale en cas de on-fonctionnement ou autre indisponibilité de la copie originale. La copie originale devra conserver toutes les notes de droits d'auteurs.
+
+3. Il vous est accordé une licence exclusivement pour la partie du code d'objet lisisble sur une machine du logiciel. Vous n'avez pas le droit de modifier, d'améliorer, ou de changer le logiciel à partir de son état actuel.
+
+4. Vous ne pouvez utiliser le logiciel pour autrui ou dans un réseau sans consentement écrit de celui qui a accordé la licence.
+
+5. Vous ne pouvez distribuer, copier, publier, céder, vendre, négocier, transférer, louer ou accorder aucun autre droit d'utilisation du logiciel.
+
+6. vous n'aurez aucun droit de propriété sur le logiciel. Vous reconnaissez et vous acceptez que la personne accordant la licence se réserve tous les droits d'auteur et autres droits de propriété sur le logiciel.
+
+7. Votre licence d'utilisation du logiciel sera révocable par la personne accordant la licence sur notification écrite ou électronique. La présente licence prendra automatiquement fin en cas de violation d'une condition de la licence ou en cas d'utilisation du logiciel au de-delà du degré prévu par la présente licence.
+
+8. L'utilisation de la présente licence dans le cadre prévu est exempte de tout frais et de redevances et frais de licence que vous aurez à payer. L'utilisation hors de ce cadre constituera une violation du droit d'auteur.
+
+9. Vous acceptez le logiciel sur la base "telle quelle" avec toutes les fautes. Aucun engagement et garantie ne sont faits sur un quelconque aspect du logiciel.
+
+10. LA PERSONNE ACCORDANT LA LICENCE REJETTE TOUTES LES GARANTIES, EXPLICITES OU IMPLICITES, RELATIVES AU LOGICIEL, DONT TOUTE GARANTIE D'ADEQUATION A UN OBJET PARTICULIER OU A CARACTERE MARCHANT. LA PERSONNE ACCORDANT LA LICENCE NE SERA TENUE RESPONSABLE POUR AUCUN DOMMAGE, ACCIDENT, PERTE DE DONNEES CAUSE DIRECTEMENT OU INDIRECTEMENT PAR L'UTILISATION DU LOGICIEL.
+
+11. La présente licence de logiciel gratuit sera interprétée conformément aux lois Françaises. Vous vous engagez à ce que toutes les disputes relatives au logiciel et/ou contrat de licence de logiciel seront jugées par les tribunaux Français. Vous vous engagez par la présente à vous soumettre aux juridictions de tels tribunaux.
+
+12. L'incapacité de la personne accordant la licence de faire valoir un droit prévu par la présente acceptation ou ses droits d'auteur sur le logiciel ne sera pas considérée comme un amendement au présent contrat ou une renonciation de la personne accordant la licence à ses droits prévus par la préente ou par une loi.

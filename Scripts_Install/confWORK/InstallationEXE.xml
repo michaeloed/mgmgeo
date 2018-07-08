@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<Installation>
+	<Config>
+		<Name>MyGeocachingManager</Name>
+		<ExeVersion>D:\Development\MyGeocachingManager\MyGeocachingManager\bin\Release\MyGeocachingManager.exe</ExeVersion>
+		<Version></Version>
+		<DirToCopy>
+			<Data src="D:\Development\MyGeocachingManager\MyGeocachingManager\License" dst="License"/>
+			<Data src="D:\Development\MyGeocachingManager\MyGeocachingManager\Resources" dst="Resources"/>
+			<Data src="D:\Development\MyGeocachingManager\MyGeocachingManager\COTSvoid" dst="COTS"/>
+			<Data src="D:\Development\MyGeocachingManager\MyGeocachingManager\Datavoid" dst="Data"/>
+			<Data src="D:\Development\MyGeocachingManager\MyGeocachingManager\Resources" dst="..\..\Bruno\Program Files\MyGeocachingManager\Resources"/>
+		</DirToCopy>
+		<FileToCopy>
+			<Data src="D:\Development\MyGeocachingManager\MyGeocachingManager\bin\Release\MyGeocachingManager.exe" dst="MyGeocachingManager.exe"/>
+			<Data src="D:\Development\MyGeocachingManager\MyGeocachingManager\bin\Release\MyGeocachingManager.xml" dst="MyGeocachingManager.xml"/>
+			<Data src="D:\Development\MyGeocachingManager\MyGeocachingManager\MANDATORY_CONFIG.dat" dst="MANDATORY_CONFIG.dat"/>
+			<Data src="D:\Development\MyGeocachingManager\MyGeocachingManager\splash.png" dst="splash.png"/>
+			<Data src="D:\Development\MyGeocachingManager\MyGeocachingManager\majorfailure.gif" dst="majorfailure.gif"/>
+			<Data src="D:\Development\MyGeocachingManager\MyGeocachingManager\MyGeocachingManager.exe.Config.publish" dst="MyGeocachingManager.exe.Config"/>
+			<Data src="D:\Development\MyGeocachingManager\MyGeocachingManager\HtmlAgilityPack\HtmlAgilityPack.dll" dst="HtmlAgilityPack.dll"/>
+			<Data src="D:\Development\MyGeocachingManager\MyGeocachingManager\HtmlAgilityPack\HtmlRenderer.dll" dst="HtmlRenderer.dll"/>
+			<Data src="D:\Development\MyGeocachingManager\MyGeocachingManager\SQLite\System.Data.SQLite.dll" dst="COTS\System.Data.SQLite.dll"/>
+			<Data src="D:\Development\MyGeocachingManager\MyGeocachingManager\SQLite\System.Data.SQLite.dll.32" dst="COTS\System.Data.SQLite.dll.32"/>
+			<Data src="D:\Development\MyGeocachingManager\MyGeocachingManager\SQLite\System.Data.SQLite.dll.64" dst="COTS\System.Data.SQLite.dll.64"/>
+			<Data src="D:\Development\MyGeocachingManager\MyGeocachingManager\SQLite\patch_SQL_32.bat" dst="COTS\patch_SQL_32.bat"/>
+			<Data src="D:\Development\MyGeocachingManager\MyGeocachingManager\SQLite\patch_SQL_64.bat" dst="COTS\patch_SQL_64.bat"/>
+			<Data src="D:\Development\MyGeocachingManager\MyGeocachingManager\SQLite\System.Data.SQLite.xml" dst="COTS\System.Data.SQLite.xml"/>
+			<Data src="D:\Development\MyGeocachingManager\MyGeocachingManager\GMap.NET\GMap.NET.Core.dll" dst="GMap.NET.Core.dll"/>
+			<Data src="D:\Development\MyGeocachingManager\MyGeocachingManager\GMap.NET\GMap.NET.Core.xml" dst="GMap.NET.Core.xml"/>
+			<Data src="D:\Development\MyGeocachingManager\MyGeocachingManager\GMap.NET\GMap.NET.WindowsForms.dll" dst="GMap.NET.WindowsForms.dll"/>
+			<Data src="D:\Development\MyGeocachingManager\MyGeocachingManager\GMap.NET\GMap.NET.WindowsForms.xml" dst="GMap.NET.WindowsForms.xml"/>
+			<Data src="D:\Development\MyGeocachingManager\MyGeocachingManager\Updater.exe" dst="Updater.exe"/>
+			<Data src="D:\Development\MyGeocachingManager\MyGeocachingManager\update.xml" dst="update.xml"/>
+			<Data src="D:\Development\MyGeocachingManager\notice.png" dst="notice.png"/>
+			<Data src="D:\Development\MyGeocachingManager\notice.png" dst="..\notice.png"/>
+			<Data src="D:\Development\MyGeocachingManager\readme.html" dst="readme.html"/>
+			<Data src="D:\Development\MyGeocachingManager\readme.html" dst="..\readme.html"/>
+			<Data src="D:\Development\MyGeocachingManager\gold.html" dst="gold.html"/>
+			<Data src="D:\Development\MyGeocachingManager\gold.html" dst="..\gold.html"/>
+			<Data src="D:\Development\MyGeocachingManager\history.html" dst="..\history.html"/>
+			<Data src="D:\Development\MyGeocachingManager\MyGeocachingManager\bin\Release\MyGeocachingManager.exe" dst="..\..\Bruno\Program Files\MyGeocachingManager\MyGeocachingManager.exe"/>
+			<Data src="D:\Development\MyGeocachingManager\MyGeocachingManager\bin\Release\MyGeocachingManager.xml" dst="..\..\Bruno\Program Files\MyGeocachingManager\MyGeocachingManager.xml"/>
+		</FileToCopy>
+		<Cmd exe="cmd" params="/C del /S /AR /AS /AH /AA thumbs.db;/C attrib -r *.* /s"/>
+		<VersionMinForUpdate>4.0.4.0</VersionMinForUpdate>
+		<Zip>True</Zip>
+	</Config>
+</Installation>

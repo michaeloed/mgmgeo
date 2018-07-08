@@ -1,0 +1,41 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+# SharpDevelop 5.1
+VisualStudioVersion = 12.0.20827.3
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyGeocachingManager", "MyGeocachingManager\MyGeocachingManagerSD.csproj", "{86F924DA-6A1A-47A1-8771-5E68956F2D1C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UpdaterSD", "Updater\UpdaterSD.csproj", "{E1474AE7-19C5-42DA-AC6C-98F3135AD419}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InstallationDirCreatorSD", "InstallationDirCreator\InstallationDirCreatorSD.csproj", "{EA75DC0F-EC61-4D95-A058-BFBCF9A2DED7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Keygen", "Keygen\Keygen.csproj", "{BE3A7F6C-863D-48B0-A236-76F709DCD3AC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{86F924DA-6A1A-47A1-8771-5E68956F2D1C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{86F924DA-6A1A-47A1-8771-5E68956F2D1C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{86F924DA-6A1A-47A1-8771-5E68956F2D1C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{86F924DA-6A1A-47A1-8771-5E68956F2D1C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E1474AE7-19C5-42DA-AC6C-98F3135AD419}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E1474AE7-19C5-42DA-AC6C-98F3135AD419}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E1474AE7-19C5-42DA-AC6C-98F3135AD419}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E1474AE7-19C5-42DA-AC6C-98F3135AD419}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EA75DC0F-EC61-4D95-A058-BFBCF9A2DED7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA75DC0F-EC61-4D95-A058-BFBCF9A2DED7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA75DC0F-EC61-4D95-A058-BFBCF9A2DED7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA75DC0F-EC61-4D95-A058-BFBCF9A2DED7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BE3A7F6C-863D-48B0-A236-76F709DCD3AC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE3A7F6C-863D-48B0-A236-76F709DCD3AC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE3A7F6C-863D-48B0-A236-76F709DCD3AC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE3A7F6C-863D-48B0-A236-76F709DCD3AC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

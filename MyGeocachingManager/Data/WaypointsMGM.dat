@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<gpx xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ox="http://www.opencaching.com/xmlschemas/opencaching/1/0" xmlns:xsd="http://www.w3.org/2001/XMLSchema" version="1.0" creator="Groundspeak, Inc. All Rights Reserved. http://www.groundspeak.com" xsi:schemaLocation="http://www.topografix.com/GPX/1/0 http://www.topografix.com/GPX/1/0/gpx.xsd http://www.groundspeak.com/cache/1/0/1 http://www.groundspeak.com/cache/1/0/1/cache.xsd" xmlns="http://www.topografix.com/GPX/1/0">
+  <name>Cache Listing Generated from Geocaching.com</name>
+  <desc>This is an individual cache generated from Geocaching.com</desc>
+  <author>Account "brunath_fr" From Geocaching.com</author>
+  <email>contact@geocaching.com</email>
+  <url>http://www.geocaching.com</url>
+  <urlname>Geocaching - My Geocaching Manager Export vendredi 7 octobre 2016</urlname>
+  <time>2016-10-07T17:32:35Z</time>
+  <keywords>cache, geocache</keywords>
+  <wpt lat="48.7762159069919" lon="1.92398071289063">
+    <time>2015-12-04T11:38:19Z</time>
+    <name>PK5PT0P</name>
+    <cmt />
+    <desc>Parking dans l'eau</desc>
+    <url>http://www.geocaching.com/seek/cache_details.aspx?guid=e58a3a4e-5abb-44b2-b3c6-93d2e534473a</url>
+    <urlname>Parking dans l'eau</urlname>
+    <sym>Parking Area</sym>
+    <type>Waypoint|Parking Area</type>
+  </wpt>
+  <wpt lat="48.761883" lon="1.943517">
+    <time>2015-12-04T11:47:53Z</time>
+    <name>FL5378V</name>
+    <cmt />
+    <desc>final !</desc>
+    <url>http://www.geocaching.com/seek/cache_details.aspx?guid=a0a9d315-a643-40aa-91cd-7c44c4ea226e</url>
+    <urlname>final !</urlname>
+    <sym>Final Location</sym>
+    <type>Waypoint|Final Location</type>
+  </wpt>
+  <wpt lat="44.427583" lon="5.710167">
+    <time>2016-01-05T14:58:14Z</time>
+    <name>FL68042</name>
+    <cmt />
+    <desc>final</desc>
+    <url>http://www.geocaching.com/seek/cache_details.aspx?guid=e3175257-11c1-4318-afd4-c2d1fa9a4e23</url>
+    <urlname>final</urlname>
+    <sym>Final Location</sym>
+    <type>Waypoint|Final Location</type>
+  </wpt>
+  <wpt lat="46.719767" lon="-1.458633">
+    <time>2016-10-07T17:32:35Z</time>
+    <name>FL4CDFA</name>
+    <cmt />
+    <desc>gkjkjhgkjhkjh</desc>
+    <url>https://www.geocaching.com/seek/cache_details.aspx?guid=e0e38c15-170d-411c-8ab5-0a438a20a17e</url>
+    <urlname>gkjkjhgkjhkjh</urlname>
+    <sym>Final Location</sym>
+    <type>Waypoint|Final Location</type>
+  </wpt>
+</gpx>

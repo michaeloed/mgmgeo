@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<Name>MyGeocachingManager</Name>
+<Version>1.0.4731.17648</Version>
+<DirToCopy>
+	<Data src="GPX" dst=""/>
+	<Data src="Img" dst=""/>
+	<Data src="bin/Release/fr-FR" dst=""/>
+</DirToCopy>
+<FileToCopy>
+	<Data src="bin/Release/MyGeocachingManager.exe" dst=""/>
+	<Data src="bin/Release/MyGeocachingManager.exe.Config" dst=""/>
+</FileToCopy>
+</xml>

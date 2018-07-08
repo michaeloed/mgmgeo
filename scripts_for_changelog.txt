@@ -1,0 +1,126 @@
+<script type="text/javascript">
+function getParam ( sname )
+{
+  var params = location.search.substr(location.search.indexOf("?")+1);
+  var sval = "";
+  params = params.split("&");
+    // split param and value into individual pieces
+    for (var i=0; i<params.length; i++)
+       {
+         temp = params[i].split("=");
+         if ( [temp[0]] == sname ) { sval = temp[1]; }
+       }
+  return sval;
+}
+
+function shownoticeandcolumn(showonlynotice, column, showcolumn){
+    dpshow = "table-cell";
+    dphide = "none";
+	if (showcolumn)
+        dp = dpshow;
+    else
+        dp = dphide;
+		
+	//alert(showonlynotice + " " + column + " " + showcolumn);
+    tds = document.getElementsByTagName('tr');
+    for (i=0; i<tds.length; i++)
+	{
+		isnotice = false;
+		isnotice = isnotice || (tds[i].childNodes[1].innerHTML.indexOf("notice.png") !== -1);
+		isnotice = isnotice || (tds[i].childNodes[1].innerHTML.indexOf("English") == 0);
+		isnotice = isnotice || (tds[i].childNodes[1].innerHTML.indexOf("<h2><font color=\"blue\">") == 0);
+		
+		if (isnotice)
+		{
+			// on a une notice
+			// On affiche tout le temps de toute façon mais on regarde quand même les histoires de colonne
+			tds[i].childNodes[0].style.display = dpshow;
+			tds[i].childNodes[1].style.display = dpshow;
+			tds[i].childNodes[2].style.display = dpshow;
+			
+			// La bonne gestion de la colonne
+			tds[i].childNodes[column].style.display = dp;
+		}
+		else
+		{
+			// Ce n'est pas une notice
+			if (showonlynotice)
+			{
+				// On masque donc on se fout des histoires de colonne
+				tds[i].childNodes[0].style.display = dphide;
+				tds[i].childNodes[1].style.display = dphide;
+				tds[i].childNodes[2].style.display = dphide;
+			}
+			else
+			{
+				// on montre mais on regarde quand même les histoires de colonne
+				tds[i].childNodes[0].style.display = dpshow;
+				tds[i].childNodes[1].style.display = dpshow;
+				tds[i].childNodes[2].style.display = dpshow;
+				
+				// La bonne gestion de la colonne
+				tds[i].childNodes[column].style.display = dp;
+			}
+
+		}
+	}
+}
+
+function showhidenoticeandcolumnfromradio(){
+
+  var ele1 = document.getElementsByName('groupNotice');
+  var ele2 = document.getElementsByName('groupLangue');
+  showonlynotice = true;
+  if (ele1[0].checked)
+  {
+	showonlynotice = false;
+  }
+  
+  if (ele2[0].checked)
+  {
+     shownoticeandcolumn(showonlynotice, 1, true);
+     shownoticeandcolumn(showonlynotice, 2, true);
+  }
+  else if (ele2[1].checked) // English
+	{
+		shownoticeandcolumn(showonlynotice, 1, true);
+		shownoticeandcolumn(showonlynotice, 2, false);
+	}
+  else if (ele2[2].checked) // Français
+	{
+		shownoticeandcolumn(showonlynotice, 2, true);
+		shownoticeandcolumn(showonlynotice, 1, false);
+	}
+}
+
+var param = getParam("lng");
+var param2 = getParam("notice");
+window.onload = initialize
+function initialize() {
+  var ele = document.getElementsByName('groupLangue');
+  if (param == "fr")
+  {
+     ele[2].checked = true;
+  }
+ else if (param == "en")
+ {
+    ele[1].checked = true;
+  }
+  else
+ {
+    ele[0].checked = true;
+  }
+  
+  var ele2 = document.getElementsByName('groupNotice');
+  if (param2 == "true")
+  {
+     ele2[1].checked = true;
+  }
+ else
+ {
+    ele2[0].checked = true;
+  }
+  
+  showhidenoticeandcolumnfromradio();
+}
+</script>

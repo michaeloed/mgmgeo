@@ -1,0 +1,52 @@
+<font Face=Corbel Size=4><#TYPEIMG#>&nbsp;<font size=5><b>[<#CODE#>]&nbsp;<#NAME#></b></font><br>
+<font size=2><b><#ACACHEBY#></b>&nbsp;<#CREATOR#><span style="margin-left:30px;"><b><#HIDENAT#></b>:</span><#DATECREATION#></font><br>
+<font size=2><a href=<#URLGC#>><#VIEWONGC#></a></font><br>
+<br>
+<table border=0>
+<tr>
+<td><font size=3><b><#DIFFTXT#>:</b></font></td>
+<td><#DIFFIMG#></td>
+<td><span style="margin-left:30px;"><font size=3><b><#CONTAINERTXT#>:</b>&nbsp;</font><#CONTAINERIMG#><font size=2>(<#CONTAINER#>)</font></span></td>
+<td><span style="margin-left:30px;"><font size=3><b><#FAVTXT#>:</b>&nbsp;</font><#FAVIMG#><font size=4><#FAV#></font></span></td>
+<td><span style="margin-left:30px;"><font size=3><b><#RATINGTXT#>:</b>&nbsp;</font><#RATINGIMG#><font size=4><#RATING#></font></span></font></td>
+</tr>
+<tr>
+<td><font size=3><b><#TERRTXT#>:</b></font></td>
+<td><#TERRIMG#></td>
+<td>&nbsp;</td>
+<td><span style="margin-left:30px;"><font size=3><b><#VISITTXT#>:</b>&nbsp;</font><#VISIT#></span></td>
+<td>&nbsp;</td></tr>
+</table>
+<br>
+<div style="background-color:#eff4f9; ">
+<font size=3><b><#LONLATDMS#></b><span style="margin-left:30px;"><b><#DISTTXT#></b>:&nbsp;</span><#DIST#><#DISTLBL#></font><br>
+<font size=3><b><#LATTXT#>&nbsp;/&nbsp;<#LONTXT#></b>:&nbsp;<#LATVAL#>&deg;&nbsp;<#LONVAL#>&deg;</font><br><font size=2><#VIEWMAPMGMLINK#><a href=<#LINKMAPS#>><#VIEWMAPSTXT#></a><br>
+<font size=3><b><#WHERE#></b>:&nbsp;<#STATE#>&nbsp;(<#COUNTRY#>)</font><br>
+</div>
+<br>
+<font size=3><b><#AVAILTXT#></b>:&nbsp;<#AVAILIMG#><span style="margin-left:30px;"><b><#NOTARCHTXT#></b>:&nbsp;</span><#NOTARCHIMG#></font><br>
+<br>
+<hr>
+<#MYNOTE#>
+<font size=3><#SHORTDESC#><br>
+<#LONGDESC#></font><br>
+<br>
+<hr>
+<font size=3><b><#HINTTXT#></b>:&nbsp;<#HINT#></font><br>
+<br>
+<font size=3><b><#IMGTXT#></b>:&nbsp;</font><br>
+<#IMGLST#><br>
+<br>
+<font size=3><b><#ATTRIBUTESTXT#></b>:<br>
+<#ATTRIBUTESIMG#><br>
+<br>
+<font size=3><b><#TBGCTXT#></b>:<br>
+<#TBGC#><br>
+<br>
+<hr>
+<div style="background-color:whitesmoke">
+<font size=4><#LOGSTATSFOUNDIMG#>&nbsp;<b><#LOGSTATSFOUND#></b><span style="margin-left:30px;"><#LOGSTATSNOTFOUNDIMG#>&nbsp;<b><#LOGSTATSNOTFOUND#></b></span></font>
+<br>
+<font size=3><#LOGS#><br>
+</div>
+<font size=1><#ORIGIN#></font>

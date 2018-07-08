@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<Installation>
+	<Config>
+		<Name>MyGeocachingManagerSRC</Name>
+		<ExeVersion>D:\Development\MyGeocachingManager\MyGeocachingManager\bin\Release\MyGeocachingManager.exe</ExeVersion>
+		<Version></Version>
+		<DirToCopy>
+			<Data src="D:\Development\MyGeocachingManager" dst="MyGeocachingManager"/>
+		</DirToCopy>
+		<FileToCopy>
+		</FileToCopy>
+		<Cmd exe="cmd" params="/C del /S /AR /AS /AH /AA thumbs.db"/>
+		<VersionMinForUpdate>4.0.0.0</VersionMinForUpdate>
+		<Zip>True</Zip>
+	</Config>
+</Installation>

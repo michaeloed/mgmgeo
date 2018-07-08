@@ -1,0 +1,1 @@
+﻿- Combattre les fuites mémoire : libérer après usage (Dispose) : Image, Bitmap, Pen, SolidBrush, Graphic 

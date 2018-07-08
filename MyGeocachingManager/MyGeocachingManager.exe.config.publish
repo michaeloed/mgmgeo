@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+  <startup>
+
+    <supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.5" />
+  </startup>
+  <appSettings>
+    <add key="urlupdate" value="http://mgmgeo.free.fr;http://mgmgeo.ddns.net:666/mgmgeo"/>
+    <add key="enabletooltips" value="True"/>
+    <add key="disabletooltipsformainlist" value="False" />
+    <add key="autocheckupdate" value="True"/>
+    <add key="logfile" value=""/>
+    <add key="debugbtn" value="False"/>
+    <add key="markmissingcaches" value="False"/>
+    <add key="disablethreadprogressbar" value="False"/>
+    <add key="useportablegmapcache" value="False"/>
+    <add key="forceLocale" value=""/>
+    <add key="openGeocachingEmbedded" value="False"/>
+    <add key="openCacheEmbedded" value="True"/>
+    <add key="datapath" value=""/>
+    <add key="daysfornew" value="30"/>
+    <add key="mylocationlat" value="48.856567"/>
+    <add key="mylocationlon" value="2.35191"/>
+    <add key="key" value=""/>
+    <add key="owner" value=""/>
+    <add key="ownerpassword" value=""/>
+    <add key="ignorefounds" value="False"/>
+    <add key="usekm" value="True"/>
+    <add key="hidencolumns" value=""/>
+    <add key="ordercolumns" value=""/>
+    <add key="forceupdate" value=""/>
+    <add key="proxyused" value="False"/>
+    <add key="proxydomain" value=""/>
+    <add key="proxylogin" value=""/>
+    <add key="proxypassword" value=""/>
+    <add key="spoilerdelaydownload" value="0"/>
+    <add key="usespoilerskeywords" value="False"/>
+    <add key="getimagesfromgallery" value="False"/>
+    <add key="displaytabmap" value="True"/>
+    <add key="spoilerskeywords" value="spoiler¤spolier¤indice¤cache¤ici¤aide¤cheat¤help¤here¤auge¤hilfe¤hintweis¤hier"/>
+    <add key="excludedfiles" value=""/>
+    <add key="yandextrnsl" value="trnsl.1.1.20161026T084236Z.3c7207e1a84c59bd.e9ff471f5d54a9ac80db844593c3679a8df439da" />
+    <add key="useGCPopularityFormula" value="False"/>
+    <add key="MapProvider" value=""/>
+    <add key="numberlastlogssymbols" value ="1"/>
+    <add key="displayscaleonmap" value="False"/>
+    <add key="dtonmapgradient" value="3"/>
+    <add key="toolbarids" value="" />
+    <add key="autosavedb" value="False" />
+  </appSettings>
+</configuration>
