@@ -19621,7 +19621,7 @@ Users of the free API:
                     System.Net.ServicePointManager.SecurityProtocol = System.Net.SecurityProtocolType.Tls12;
 
                     // Récupération des VIEWSTATE pour s'authentifier
-                    string VOID_URL = "https://www.geocaching.com/account/login";
+                    string VOID_URL = "https://www.geocaching.com/account/signin";
                     HttpWebResponse objResponse = null;
                     HttpWebRequest objRequest = null;
                     //if (false)
