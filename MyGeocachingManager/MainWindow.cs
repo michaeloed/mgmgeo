@@ -19658,7 +19658,7 @@ Users of the free API:
                     Dictionary<String, String> post_values = new Dictionary<String, String>();
                     //post_values.Add("__EVENTTARGET", "");
                     //post_values.Add("__EVENTARGUMENT", "");
-                    post_values.Add("Username", username);
+                    post_values.Add("UsernameOrEmail", username);
                     post_values.Add("Password", password);
 					post_values.Add("__RequestVerificationToken", token);
 
