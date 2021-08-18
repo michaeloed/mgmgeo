@@ -17304,42 +17304,53 @@ font-size:10pt;
             try
             {
                 UpdateHttpDefaultWebProxy();
-                // On checke que les L/MDP soient corrects
-                // Et on récupère les cookies au passage
+                // Check auth
                 CookieContainer cookieJar = CheckGCAccount(true, false);
                 if (cookieJar == null)
+                {
                     return;
+                }
 
-                String url = "http://www.geocaching.com/my/default.aspx";
+                string url = "https://www.geocaching.com/p/default.aspx";
                 HttpWebRequest objRequest = (HttpWebRequest)WebRequest.Create(url);
-                objRequest.Proxy = GetProxy(); // Là encore, on peut virer le proxy si non utilisé (NULL)
-                objRequest.CookieContainer = cookieJar; // surtout récupérer le container de cookie qui est maintenant renseigné avec le cookie d'authentification
+                objRequest.Proxy = GetProxy(); 
+                objRequest.CookieContainer = cookieJar; // Cookie contains the authentication
                 HttpWebResponse objResponse = (HttpWebResponse)objRequest.GetResponse();
-                String response;
+                string response;
                 using (StreamReader responseStream = new StreamReader(objResponse.GetResponseStream()))
                 {
                     response = responseStream.ReadToEnd();
                     responseStream.Close();
                 }
                 
-                // On parse la page
+                // Parse response
                 // ****************
-                String user = MyTools.GetSnippetFromText("<span class=\"ProfileUsername\" title=\"", "\"", response);
+                String user = MyTools.GetSnippetFromText("<span id=\"ctl00_ProfileHead_ProfileHeader_lblMemberName\">", "</span>", response);
                 Log(user);
-                String avatarurl = MyTools.DoRegex(response, "<img id=\"ctl00_uxLoginStatus_hlHeaderAvatar\" src=\"(.*?)\" style=\"border-width:0px;\" />"); ;
+                
+                string avatarurl = MyTools.GetSnippetFromText("<div class=\"profile-image-wrapper\" style=\"background-image: url('", "')\">", response);
+                if (!avatarurl.StartsWith("http"))
+                {
+                    avatarurl = "https://www.geocaching.com" + avatarurl;
+                }
                 Log(avatarurl);
-                String membership = MyTools.CleanString(MyTools.GetSnippetFromText("<p class=\"NoBottomSpacing\" id=\"memberStatus\">", "<br />", response));
+                
+                string membership = MyTools.CleanString(MyTools.GetSnippetFromText("Membership type:</span>", "</span>", response));
 				Log(membership);
-                String tmp = MyTools.GetSnippetFromText("<p class=\"NoBottomSpacing\" id=\"memberStatus\">", "</div>", response);
-                String membersince = MyTools.GetSnippetFromText("</strong>", "<br />", tmp);
+
+                string membersince = MyTools.GetSnippetFromText("Joined ", "</span>", response);
                 Log(membersince);
-                tmp = MyTools.GetSnippetFromText("<div id=\"uxCacheFind\" class=\"statbox\">", "</div>", response);
-                String find = MyTools.CleanString(MyTools.GetSnippetFromText("<span class=\"statcount\">", "</span>", tmp));
+
+                // Profile states:
+                string profileBlock = MyTools.GetSnippetFromText("<div id=\"ctl00_ProfileHead_ProfileHeader_divStats\" class=\"profile-stats\">", "</div>", response);
+                
+                string find = MyTools.GetSnippetFromText("<img src=\"/app/ui-icons/icons/log-types/2.svg\" height=\"24\" width=\"24\" alt=\"\" aria-hidden=\"true\"> <span>", " finds", profileBlock);
                 Log(find);
-                tmp = MyTools.GetSnippetFromText("<div id=\"uxCacheHide\" class=\"statbox\">", "</div>", response);
-                String hide = MyTools.CleanString(MyTools.GetSnippetFromText("<span class=\"statcount\">", "</span>", tmp));
+                
+                string hide = MyTools.GetSnippetFromText("<img src=\"/app/ui-icons/icons/cache-types/owned.svg\" height=\"24\" width=\"24\" alt=\"\" aria-hidden=\"true\"> ", " hides", profileBlock);
                 Log(hide);
-                String fav = MyTools.CleanString(MyTools.GetSnippetFromText("<span class=\"favorite-rank\">", "</span>", response));
+                
+                string fav = MyTools.GetSnippetFromText(";players\">", " Favorite points", profileBlock);
                 Log(fav);
                 String tb = "-";
                 
